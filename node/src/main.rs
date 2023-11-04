@@ -25,8 +25,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
     let rpc = rpc::setup(
         args.bitcoin.clone(),
         args.rpcport,
-        args.rpcuser,
-        args.rpcpass,
+        args.rpccookiefile,
     )?;
     let zmq_url = format!("tcp://{}:{}", args.bitcoin, args.zmqport);
 
